@@ -8,8 +8,21 @@ project(pde4430_coursework2)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+  roscpp
   rospy
   std_msgs
+  urdf
+  xacro
+  gazebo_ros
+  controller_manager
+  joint_state_controller
+  robot_state_publisher
+  effort_controllers
+  geometry_msgs
+  tf
+  tf2
+  tf2_ros
+
 )
 
 ## System dependencies are found with CMake's conventions
@@ -106,6 +119,22 @@ catkin_package(
 #  LIBRARIES pde4430_coursework2
 #  CATKIN_DEPENDS rospy std_msgs
 #  DEPENDS system_lib
+  CATKIN_DEPENDS
+  roscpp
+  rospy
+  std_msgs
+  urdf
+  xacro
+  gazebo_ros
+  controller_manager
+  joint_state_controller
+  robot_state_publisher
+  effort_controllers
+  geometry_msgs
+  tf
+  tf2
+  tf2_ros
+
 )
 
 ###########

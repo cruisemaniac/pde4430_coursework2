@@ -1,0 +1,14 @@
+<launch>
+  <!-- Load robot description from URDF/XACRO -->
+  <param name="robot_description"
+         command="$(find xacro)/xacro '$(find pde4430_coursework2)/urdf/three_wheeled_robot.xacro'" />
+
+  <!-- Start RViz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find pde4430_coursework2)/rviz/robot.rviz"/>
+
+  <!-- Robot state publisher -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <!-- Joint state publisher with GUI -->
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+</launch>
