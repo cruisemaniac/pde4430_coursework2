@@ -33,9 +33,11 @@
   </link>
 
   <!-- Add wheels -->
-  <xacro:wheel prefix="left" x="-0.2" y="${base_width/2 + wheel_width/2}"/>
-  <xacro:wheel prefix="right" x="-0.2" y="-${base_width/2 + wheel_width/2}"/>
+  <!-- <xacro:wheel prefix="left" x="0" y="${base_width/2}"/>
+  <xacro:wheel prefix="right" x="0" y="-${base_width/2}"/> -->
 
+  <xacro:wheel prefix="left" x="${-base_length/2 + wheel_radius}" y="${base_width/2 + wheel_radius/4}"/>
+  <xacro:wheel prefix="right" x="${-base_length/2 + wheel_radius}" y="${-base_width/2 - wheel_radius/4}"/>
   <!-- Add caster wheel -->
   <xacro:caster_wheel />
 

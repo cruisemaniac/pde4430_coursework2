@@ -25,11 +25,21 @@
     <joint name="${prefix}_wheel_joint" type="continuous">
       <parent link="base_link"/>
       <child link="${prefix}_wheel"/>
-      <origin xyz="${x} ${y} 0" rpy="${pi/2} 0 0"/>
+      <origin xyz="${x} ${y} ${-base_height/2}" rpy="${pi/2} 0 0"/>  <!-- Corrected RPY and Z offset -->
       <axis xyz="0 0 1"/>
     </joint>
-  </xacro:macro>
 
+    <transmission name="${prefix}_wheel_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}_wheel_joint">
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="${prefix}_wheel_motor">
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+  </xacro:macro>
 
   <!-- Caster Wheel Macro -->
   <xacro:macro name="caster_wheel">
@@ -56,7 +66,7 @@
     <joint name="caster_wheel_joint" type="fixed">
       <parent link="base_link"/>
       <child link="caster_wheel"/>
-      <origin xyz="${base_length/2 - caster_radius} 0 -${caster_radius}"/>
+      <origin xyz="${base_length/2 - caster_radius} 0 ${-base_height/2 - caster_radius}"/>  <!-- Corrected Z offset for caster wheel -->
     </joint>
   </xacro:macro>
 
@@ -85,9 +95,9 @@
     <joint name="${prefix}_arm_joint" type="prismatic">
       <parent link="base_link"/>
       <child link="${prefix}_arm"/>
-      <origin xyz="${base_length/2} ${side_mult * 0.1} ${base_height/2}"/>
+      <origin xyz="${base_length/2} ${side_mult * base_width/2} ${base_height/2 + arm_radius}"/>  <!-- Corrected Z offset for arm joint -->
       <axis xyz="0 1 0"/>
-      <limit lower="-0.05" upper="0.05" effort="100" velocity="1"/>
+      <limit lower="${-arm_length/2}" upper="${arm_length/2}" effort="100" velocity="1"/>  <!-- Adjusted limits for arm movement -->
     </joint>
 
     <!-- Gripper -->
