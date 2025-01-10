@@ -1,0 +1,10 @@
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro $(find pde4430_coursework2)/urdf/three_wheeled_robot.xacro"/>
+
+  <node name="three_wheeled_robot" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model three_wheeled_robot" output="screen" />
+
+  <node name="controller_spawner" pkg="controller_manager" type="spawner"
+      args="diff_drive_controller" output="screen"/>
+
+
+</launch>

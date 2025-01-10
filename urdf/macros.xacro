@@ -17,7 +17,7 @@
         </geometry>
       </collision>
       <inertial>
-        <mass value="1.0"/>
+        <mass value="0.5"/>
         <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
       </inertial>
     </link>
@@ -28,17 +28,6 @@
       <origin xyz="${x} ${y} ${-base_height/2}" rpy="${pi/2} 0 0"/>  <!-- Corrected RPY and Z offset -->
       <axis xyz="0 0 1"/>
     </joint>
-
-    <transmission name="${prefix}_wheel_transmission">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${prefix}_wheel_joint">
-        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="${prefix}_wheel_motor">
-        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
-        <mechanicalReduction>1</mechanicalReduction>
-      </actuator>
-    </transmission>
   </xacro:macro>
 
   <!-- Caster Wheel Macro -->
@@ -87,17 +76,17 @@
         </geometry>
       </collision>
       <inertial>
-        <mass value="1.0"/>
+        <mass value="0.25"/>
         <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
       </inertial>
     </link>
 
-    <joint name="${prefix}_arm_joint" type="prismatic">
+    <joint name="${prefix}_arm_joint" type="fixed">
       <parent link="base_link"/>
       <child link="${prefix}_arm"/>
       <origin xyz="${base_length/2} ${side_mult * base_width/2} ${base_height/2 + arm_radius}"/>  <!-- Corrected Z offset for arm joint -->
       <axis xyz="0 1 0"/>
-      <limit lower="${-arm_length/2}" upper="${arm_length/2}" effort="100" velocity="1"/>  <!-- Adjusted limits for arm movement -->
+      <!-- <limit lower="${-arm_length/2}" upper="${arm_length/2}" effort="100" velocity="1"/>  --><!-- Adjusted limits for arm movement -->
     </joint>
 
     <!-- Gripper -->
@@ -116,7 +105,7 @@
         </geometry>
       </collision>
       <inertial>
-        <mass value="0.3"/>
+        <mass value="0.2"/>
         <inertia ixx="0.00005" ixy="0" ixz="0" iyy="0.0005" iyz="0" izz="0.00005"/>
       </inertial>
     </link>

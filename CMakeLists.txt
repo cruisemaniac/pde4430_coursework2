@@ -26,7 +26,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 ## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
+find_package(Boost REQUIRED COMPONENTS system)
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -128,6 +128,7 @@ catkin_package(
   gazebo_ros
   controller_manager
   joint_state_controller
+  diff_drive_controller
   robot_state_publisher
   effort_controllers
   geometry_msgs
@@ -146,6 +147,7 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+  ${Boost_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -219,6 +221,38 @@ include_directories(
 #   # myfile2
 #   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 # )
+
+install(DIRECTORY launch/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+  FILES_MATCHING PATTERN "*.launch"
+)
+
+# Install URDF files
+install(DIRECTORY urdf/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/urdf
+  FILES_MATCHING PATTERN "*.xacro" PATTERN "*.urdf"
+)
+
+# Install config files
+install(DIRECTORY config/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/config
+  FILES_MATCHING PATTERN "*.yaml"
+)
+
+# Install world files
+install(DIRECTORY worlds/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/worlds
+  FILES_MATCHING PATTERN "*.world"
+)
+
+# Install models
+install(DIRECTORY models/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/models
+  FILES_MATCHING PATTERN "*.sdf" PATTERN "*.config" PATTERN "*.dae"
+)
+
+
+
 
 #############
 ## Testing ##
