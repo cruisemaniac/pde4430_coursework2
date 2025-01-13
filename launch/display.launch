@@ -14,5 +14,5 @@
     args="0 0 0 0 0 0 map base_link 50" />
 
   <!-- Start RViz -->
-  <node name="rviz" pkg="rviz" type="rviz" args=""/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d '$(find pde4430_coursework2)/config/options.rviz'"/>
 </launch>
