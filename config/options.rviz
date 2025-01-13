@@ -9,6 +9,8 @@ Panels:
         - /RobotModel1
         - /RobotModel1/Links1
         - /RobotModel1/Links1/base_link1
+        - /RobotModel1/Links1/base_link1/Position1
+        - /RobotModel1/Links1/base_link1/Orientation1
         - /RobotModel1/Links1/left_wheel1
         - /RobotModel1/Links1/right_wheel1
       Splitter Ratio: 0.5
@@ -76,30 +78,10 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        left_arm:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        left_gripper:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         left_wheel:
           Alpha: 1
           Show Axes: true
-          Show Trail: false
-          Value: true
-        right_arm:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        right_gripper:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
+          Show Trail: true
           Value: true
         right_wheel:
           Alpha: 1
@@ -140,7 +122,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.6470851898193359
+      Distance: 0.837160587310791
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -156,9 +138,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.7403978109359741
+      Pitch: -0.06460202485322952
       Target Frame: base_link
-      Yaw: 3.1403987407684326
+      Yaw: 1.472237467765808
     Saved: ~
 Window Geometry:
   Displays:

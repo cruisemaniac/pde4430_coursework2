@@ -10,6 +10,19 @@
       <robotBaseFrame>base_link</robotBaseFrame>
       <leftJoint>left_wheel_joint</leftJoint>
       <rightJoint>right_wheel_joint</rightJoint>
+      <wheelSeparation>${base_width}</wheelSeparation>
+      <legacyMode>false</legacyMode>
+      <wheelDiameter>${2 * wheel_radius}</wheelDiameter>
+      <robotBaseFrame>base_link</robotBaseFrame>
+      <publishOdomTF>true</publishOdomTF>
+      <publishWheelJointState>true</publishWheelJointState>
+      <wheelAcceleration>1</wheelAcceleration>
+      <wheelTorque>20</wheelTorque>
+      <updateRate>50</updateRate>
     </plugin>
   </gazebo>
+
+  <material name="orange">
+    <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
+  </material>
 </robot>
