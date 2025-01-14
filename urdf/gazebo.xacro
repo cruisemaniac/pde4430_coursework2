@@ -16,7 +16,9 @@
       <robotBaseFrame>base_link</robotBaseFrame>
       <publishOdomTF>true</publishOdomTF>
       <publishWheelJointState>true</publishWheelJointState>
+      <max_wheel_torque>20</max_wheel_torque>
       <wheelAcceleration>1</wheelAcceleration>
+      <max_wheel_acceleration>1</max_wheel_acceleration>
       <wheelTorque>20</wheelTorque>
       <updateRate>50</updateRate>
     </plugin>
@@ -25,4 +27,32 @@
   <material name="orange">
     <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
   </material>
+
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+
+  <gazebo reference="caster_wheel">
+    <mu1 value="1.0"/>
+    <mu2 value="1.0"/>
+    <kp  value="10000000.0" />
+    <kd  value="1.0" />
+    <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference="right_wheel">
+    <mu1 value="1.0"/>
+    <mu2 value="1.0"/>
+    <kp  value="10000000.0" />
+    <kd  value="1.0" />
+    <fdir1 value="1 0 0"/>
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="left_wheel">
+    <mu1 value="1.0"/>
+    <mu2 value="1.0"/>
+    <kp  value="10000000.0" />
+    <kd  value="1.0" />
+    <fdir1 value="1 0 0"/>
+    <material>Gazebo/Black</material>
+  </gazebo>
 </robot>
