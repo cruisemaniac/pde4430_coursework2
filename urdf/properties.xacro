@@ -1,14 +1,12 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
   <!-- Robot Properties -->
-  <xacro:property name="scaling_factor" value="0.5" />
-  <xacro:property name="arm_offset_z" value="0.02 * scaling_factor"/>
-  <xacro:property name="base_width" value="${0.4 * scaling_factor}"/>
-  <xacro:property name="base_length" value="${0.6 * scaling_factor}"/>
-  <xacro:property name="base_height" value="${0.2 * scaling_factor}"/>
-  <xacro:property name="wheel_radius" value="${0.1 * scaling_factor}"/>
-  <xacro:property name="wheel_width" value="${0.08 * scaling_factor}"/>
-  <xacro:property name="caster_radius" value="${0.05 * scaling_factor}"/>
-  <xacro:property name="arm_length" value="${0.2 * scaling_factor}"/>
-  <xacro:property name="arm_radius" value="${0.03 * scaling_factor}"/>
+  <xacro:property name="base_width" value="0.2"/>
+  <xacro:property name="base_length" value="0.3"/>
+  <xacro:property name="base_height" value="0.1"/>
+  <xacro:property name="wheel_radius" value="0.05"/>
+  <xacro:property name="wheel_width" value="0.04"/>
+  <xacro:property name="caster_radius" value="0.025"/>
+  <xacro:property name="arm_length" value="0.1"/>
+  <xacro:property name="arm_radius" value="0.015"/>
 </robot>
