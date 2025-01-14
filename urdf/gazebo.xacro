@@ -21,6 +21,7 @@
       <max_wheel_acceleration>1</max_wheel_acceleration>
       <wheelTorque>20</wheelTorque>
       <updateRate>50</updateRate>
+      <max_velocity>0.5</max_velocity>
     </plugin>
   </gazebo>
 
@@ -40,16 +41,16 @@
     <material>Gazebo/Orange</material>
   </gazebo>
   <gazebo reference="right_wheel">
-    <mu1 value="1.0"/>
-    <mu2 value="1.0"/>
+    <mu1 value="1.5"/>
+    <mu2 value="1.5"/>
     <kp  value="10000000.0" />
     <kd  value="1.0" />
     <fdir1 value="1 0 0"/>
     <material>Gazebo/Black</material>
   </gazebo>
   <gazebo reference="left_wheel">
-    <mu1 value="1.0"/>
-    <mu2 value="1.0"/>
+    <mu1 value="1.5"/>
+    <mu2 value="1.5"/>
     <kp  value="10000000.0" />
     <kd  value="1.0" />
     <fdir1 value="1 0 0"/>
