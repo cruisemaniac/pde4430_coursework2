@@ -21,7 +21,7 @@
   </node>
 
   <!-- Node to spawn the robot model in Gazebo -->
-  <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model three_wheeled_robot -x 0.5 -y 0.5 -z 0" />
+  <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model three_wheeled_robot -x -2 -y 0.5 -z 0" />
 
   <!-- <node name="teleop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen">
     <remap from="/cmd_vel" to="/cmd_vel"/>
