@@ -16,10 +16,10 @@
       <robotBaseFrame>base_link</robotBaseFrame>
       <publishOdomTF>true</publishOdomTF>
       <publishWheelJointState>true</publishWheelJointState>
-      <max_wheel_torque>20</max_wheel_torque>
-      <wheelAcceleration>1</wheelAcceleration>
-      <max_wheel_acceleration>1</max_wheel_acceleration>
-      <wheelTorque>20</wheelTorque>
+      <max_wheel_torque>10</max_wheel_torque>
+      <wheelAcceleration>0.5</wheelAcceleration>
+      <max_wheel_acceleration>0.5</max_wheel_acceleration>
+      <wheelTorque>10</wheelTorque>
       <updateRate>50</updateRate>
       <max_velocity>0.5</max_velocity>
     </plugin>
