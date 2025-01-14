@@ -11,7 +11,7 @@ Panels:
         - /RobotModel1/Links1/base_link1
         - /RobotModel1/Links1/base_link1/Position1
         - /RobotModel1/Links1/base_link1/Orientation1
-        - /RobotModel1/Links1/left_wheel1
+        - /RobotModel1/Links1/caster_wheel1
         - /RobotModel1/Links1/right_wheel1
       Splitter Ratio: 0.5
     Tree Height: 1079
@@ -75,8 +75,8 @@ Visualization Manager:
           Value: true
         caster_wheel:
           Alpha: 1
-          Show Axes: false
-          Show Trail: false
+          Show Axes: true
+          Show Trail: true
           Value: true
         left_wheel:
           Alpha: 1
