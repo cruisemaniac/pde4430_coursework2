@@ -21,10 +21,7 @@
   </node>
 
   <!-- Node to spawn the robot model in Gazebo -->
-  <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot_model -x 0 -y 0 -z 0" />
-
-  <!-- Load the controller configuration -->
-  <!-- <rosparam file="$(find pde4430_coursework2)/config/controllers.yaml" command="load"/> -->
+  <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model three_wheeled_robot -x 0.5 -y 0.5 -z 0" />
 
   <!-- <node name="teleop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen">
     <remap from="/cmd_vel" to="/cmd_vel"/>

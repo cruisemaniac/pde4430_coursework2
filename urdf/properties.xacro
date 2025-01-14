@@ -9,4 +9,8 @@
   <xacro:property name="caster_radius" value="0.02"/>
   <xacro:property name="arm_length" value="0.1"/>
   <xacro:property name="arm_radius" value="0.015"/>
+
+  <xacro:property name="wall_length" value="0.3"/>
+  <xacro:property name="wall_thickness" value="0.01"/>
+  <xacro:property name="wall_height" value="0.16"/>
 </robot>

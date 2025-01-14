@@ -39,6 +39,9 @@
   <xacro:wheel prefix="left" x="${-base_length/3}" y="1"/>
   <xacro:wheel prefix="right" x="${-base_length/3}" y="-1"/>
 
-  <xacro:arm prefix="left" side_mult="1"/>
-  <xacro:arm prefix="right" side_mult="-1"/>
+  <!-- <xacro:arm prefix="left" side_mult="1"/>
+  <xacro:arm prefix="right" side_mult="-1"/> -->
+
+  <xacro:guide_wall prefix="left" side="1"/>
+  <xacro:guide_wall prefix="right" side="-1"/>
 </robot>

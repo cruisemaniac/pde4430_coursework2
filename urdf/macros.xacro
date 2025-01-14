@@ -119,4 +119,33 @@
       <origin xyz="${arm_length/2} 0 0"/>
     </joint>
   </xacro:macro>
+
+  <xacro:macro name="guide_wall" params="side prefix">
+    <link name="${prefix}_wall">
+      <visual>
+        <geometry>
+          <box size="${wall_length} ${wall_thickness} ${wall_height}"/>
+        </geometry>
+        <material name="grey">
+          <color rgba="0.5 0.5 0.5 1"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <box size="${wall_length} ${wall_thickness} ${wall_height}"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="0.3"/>
+        <inertia ixx="0.003" ixy="0" ixz="0" iyy="0.003" iyz="0" izz="0.003"/>
+      </inertial>
+   </link>
+   
+   <joint name="${prefix}_wall_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="${prefix}_wall"/>
+      <origin xyz="${base_length/2 + wall_length/2} ${side * (base_width/2 + wall_thickness/2)} ${wall_height/2}" rpy="0 0 0"/>
+    </joint>
+  </xacro:macro>
+
 </robot>
