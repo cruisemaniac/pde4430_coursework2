@@ -13,4 +13,11 @@
   <xacro:property name="wall_length" value="0.3"/>
   <xacro:property name="wall_thickness" value="0.01"/>
   <xacro:property name="wall_height" value="0.16"/>
+
+  <!-- LIDAR properties -->
+  <xacro:property name="lidar_cylinder_height" value="0.2"/>
+  <xacro:property name="lidar_radius" value="0.05"/>
+  <xacro:property name="lidar_height" value="0.05"/>
+  <xacro:property name="lidar_mount_x" value="0.0"/>
+  <xacro:property name="lidar_mount_y" value="0.0"/>
 </robot>

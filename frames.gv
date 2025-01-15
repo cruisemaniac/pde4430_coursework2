@@ -1,0 +1,16 @@
+digraph G {
+"base_link" -> "lidar_base_cylinder"[label="Broadcaster: /base_to_lidar_base\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 21113.657 sec old)\nBuffer length: 0.000 sec\n"];
+"map" -> "base_link"[label="Broadcaster: /gazebo\nAverage rate: 69.099 Hz\nMost recent transform: 21113.660 ( -0.003 sec old)\nBuffer length: 4.906 sec\n"];
+"base_link" -> "caster_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 21113.657 sec old)\nBuffer length: 0.000 sec\n"];
+"lidar_base_cylinder" -> "laser_link"[label="Broadcaster: /lidar_base_to_laser\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 21113.657 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "left_wall"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 21113.657 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "right_wall"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 21113.657 sec old)\nBuffer length: 0.000 sec\n"];
+"map" -> "odom"[label="Broadcaster: /map_to_odom\nAverage rate: 29.969 Hz\nMost recent transform: 21113.696 ( -0.039 sec old)\nBuffer length: 4.905 sec\n"];
+"base_link" -> "left_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 41.385 Hz\nMost recent transform: 21113.635 ( 0.022 sec old)\nBuffer length: 4.881 sec\n"];
+"base_link" -> "right_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 41.385 Hz\nMost recent transform: 21113.635 ( 0.022 sec old)\nBuffer length: 4.881 sec\n"];
+"map" -> "scanmatcher_frame"[label="Broadcaster: /hector_mapping\nAverage rate: 10.208 Hz\nMost recent transform: 21113.591 ( 0.066 sec old)\nBuffer length: 4.800 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 21113.657"[ shape=plaintext ] ;
+ }->"map";
+}
