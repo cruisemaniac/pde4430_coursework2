@@ -57,7 +57,8 @@ All code references ROS Navigation stack setup tutorial: https://wiki.ros.org/na
 #### **Key Commands**
 - **Start navigation:**
   ```bash
-  roslaunch pde4430_coursework2_navigation nav_stack.launch
+  roslaunch pde4430_coursework2_navigation nav_stack.launch # this launches the map and rviz
+  rosrun pde4430_coursework2_navigation navigate_to_goal.py # this provides a goal to move_base to move the robot
   ```
 
 ---
