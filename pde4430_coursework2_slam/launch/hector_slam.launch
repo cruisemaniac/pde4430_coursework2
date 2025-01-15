@@ -25,4 +25,6 @@
       <param name="transform_tolerance" value="0.2"/>
   </node>
 
+  <node name="rviz" pkg="rviz" type="rviz" args="-d '$(find pde4430_coursework2_slam)/config/lidar_sensor_options.rviz'"/>
+
 </launch>
