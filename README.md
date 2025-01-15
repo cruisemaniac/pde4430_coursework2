@@ -32,6 +32,11 @@ This package handles teleoperation of the robot using the `teleop_twist_keyboard
   roslaunch pde4430_coursework2_teleop teleop.launch
   ```
 
+The demo video does not move the sphere into the goal. So there are screenshots showing it has been done and is doable:
+
+![Bot Moving Large Sphere](screenshots/Bot moving large sphere - Pic 1.png)
+![Bot Moving Large Sphere - pic2](screenshots/Bot moving large sphere - Pic 2.png)
+![Bot Moving small and medium Spheres](screenshots/Bot moving small and medium spheres - Pic 1.png)
 ---
 
 ### **3. `pde4430_coursework2_slam`**
@@ -71,3 +76,7 @@ All code references ROS Navigation stack setup tutorial: https://wiki.ros.org/na
 - `hector_slam`
 - `amcl`
 - `move_base`
+
+## **Video**
+
+The video demo of the coursework is here: https://youtu.be/-QvWTNUymAg
