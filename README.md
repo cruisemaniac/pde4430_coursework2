@@ -34,9 +34,12 @@ This package handles teleoperation of the robot using the `teleop_twist_keyboard
 
 The demo video does not move the sphere into the goal. So there are screenshots showing it has been done and is doable:
 
-![Bot Moving Large Sphere](screenshots/Bot moving large sphere - Pic 1.png)
-![Bot Moving Large Sphere - pic2](screenshots/Bot moving large sphere - Pic 2.png)
-![Bot Moving small and medium Spheres](screenshots/Bot moving small and medium spheres - Pic 1.png)
+  ![Bot Moving Large Sphere](https://github.com/user-attachments/assets/1a046dc4-cafe-41ac-8921-a9a18358c4a0)
+  
+  ![Bot Moving Large Sphere - pic2](https://github.com/user-attachments/assets/561d12ed-a8e0-49eb-a25f-cfec9e5b9e5e)
+
+  ![Bot Moving small and medium Spheres](https://github.com/user-attachments/assets/786acc3c-ffab-4511-8d31-7c419c3eb93f)
+
 ---
 
 ### **3. `pde4430_coursework2_slam`**
